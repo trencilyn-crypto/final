@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Dashboard | Ruthy's Eatery</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="dashboard-body">
+  <header class="navbar">
+    <a class="brand" href="/customer.html">
+      <span class="logo">RE</span>
+      <span>Ruthy's Eatery</span>
+    </a>
+    <div class="nav-actions">
+      <button id="logoutBtn" class="secondary" type="button">logout</button>
+    </div>
+  </header>
+
+  <main class="container dashboard-layout">
+    <aside class="sidebar dashboard-card">
+      <div class="brand">
+        <span class="logo">C</span>
+        <span id="customerName">customer</span>
+      </div>
+      <nav>
+        <a class="active" href="#book">new booking</a>
+        <a href="#history">my bookings</a>
+      </nav>
+    </aside>
+
+    <section class="main-panel">
+      <div id="book" class="dashboard-card">
+        <h1 style="font-size:2.3rem;">new table booking</h1>
+        <p class="lead">fill out the details below. your booking will be marked as pending until the admin confirms it.</p>
+        <div id="bookingMessage" class="message"></div>
+        <form id="bookingForm" class="form-grid">
+          <div class="two-col">
+            <label>
+              booking date
+              <input id="reservationDate" type="date" name="reservationDate" required />
+            </label>
+            <label>
+              booking time
+              <input type="time" name="reservationTime" min="08:00" max="21:00" required />
+            </label>
+          </div>
+          <div class="two-col">
+            <label>
+              number of guests
+              <input type="number" name="guestCount" min="1" max="50" value="2" required />
+            </label>
+            <label>
+              contact number
+              <input type="text" name="phone" placeholder="09123456789" required />
+            </label>
+          </div>
+          <label>
+            special request / notes
+            <textarea name="specialRequest" placeholder="example: birthday dinner, near window, with child seat"></textarea>
+          </label>
+          <button type="submit">submit booking</button>
+        </form>
+      </div>
+
+      <div id="history" class="dashboard-card">
+        <h2>my bookings</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>date</th>
+                <th>time</th>
+                <th>guests</th>
+                <th>status</th>
+                <th>request</th>
+                <th>action</th>
+              </tr>
+            </thead>
+            <tbody id="customerBookings">
+              <tr><td colspan="6">loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

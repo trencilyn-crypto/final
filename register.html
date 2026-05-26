@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Ruthy's Eatery</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/">
+      <span class="logo">RE</span>
+      <span>Ruthy's Eatery</span>
+    </a>
+    <div class="nav-actions">
+      <a class="button secondary" href="/register.html">customer register</a>
+    </div>
+  </header>
+
+  <main class="container auth-wrap">
+    <section class="auth-card">
+      <div class="auth-tabs">
+        <button id="customerTab" class="active" type="button">customer</button>
+        <button id="adminTab" type="button">admin</button>
+      </div>
+      <h1 id="loginTitle" style="font-size:2.2rem;">customer login</h1>
+      <p id="loginSub" class="lead">book a table, check status, and manage your reservations.</p>
+      <div id="loginMessage" class="message"></div>
+      <form id="loginForm" class="form-grid">
+        <input type="hidden" name="role" id="role" value="customer" />
+        <label>
+          email
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          password
+          <input type="password" name="password" placeholder="enter password" required />
+        </label>
+        <button type="submit">login</button>
+      </form>
+      <p class="footer-note">default admin after database setup: <strong>admin@ruthys.com</strong> / <strong>admin12345</strong>. change this in render environment variables.</p>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

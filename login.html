@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruthy's Eatery Booking System</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/">
+      <span class="logo">RE</span>
+      <span>Ruthy's Eatery</span>
+    </a>
+    <div class="nav-actions">
+      <a class="button secondary" href="/login.html">login</a>
+      <a class="button" href="/register.html">create account</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <span class="kicker">filipino comfort food • table booking</span>
+        <h1>book your table at Ruthy's Eatery</h1>
+        <p class="lead">
+          a simple booking system where customers can reserve a table and admins can confirm, complete, or cancel reservations from one dashboard.
+        </p>
+        <div class="nav-actions">
+          <a class="button" href="/register.html">book as customer</a>
+          <a class="button secondary" href="/login.html">admin login</a>
+        </div>
+      </div>
+
+      <aside class="hero-visual card">
+        <h2>today's favorites</h2>
+        <div id="menuList">
+          <div class="food-card">
+            <h3>loading menu...</h3>
+            <p>please connect the database to show menu items.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="features">
+      <div class="card">
+        <h3>customer booking</h3>
+        <p>customers can register, login, submit table reservations, and cancel active bookings.</p>
+      </div>
+      <div class="card">
+        <h3>admin dashboard</h3>
+        <p>admins can view totals, upcoming reservations, and update booking status easily.</p>
+      </div>
+      <div class="card">
+        <h3>mysql ready</h3>
+        <p>the database is prepared for aiven mysql and can also be viewed using mysql workbench.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
